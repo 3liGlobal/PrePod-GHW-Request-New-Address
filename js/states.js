@@ -1201,6 +1201,7 @@ var original_zf_MandArray = [
 var zf_MandArray = original_zf_MandArray.slice();
 
 window.onload = function () {
+  console.log("Environment: Sandbox-2")
   var countySel = document.querySelector(".dropdown-countries"),
     stateDropdown = document.querySelector(".state-dropdown"),
     stateText = document.querySelector(".state-text"),
@@ -1255,7 +1256,7 @@ window.onload = function () {
       for (var state in countries_states[selectedCountryCode]) {
         stateDropdown.options[stateDropdown.options.length] = new Option(countries_states[selectedCountryCode][state],state);
       }
-      
+
     } else {
       stateDropdown.style.display = "none";
       // cityDropdown.style.display = "none";
