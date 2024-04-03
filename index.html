@@ -362,7 +362,7 @@
 
 				</div><!---------template Container Starts Here---------->
 				<ul>
-					<li class="zf-fmFooter"><button class="zf-submitColor">Submit</button>
+					<li class="zf-fmFooter"><button class="zf-submitColor" id="zf-submitColor">Submit</button>
 					</li>
 				</ul>
 
@@ -491,7 +491,7 @@
 			}
 		});
 	</script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	<script>
 		window.addEventListener('message', function (event) {
 			var email = event.data;
@@ -504,6 +504,14 @@
 				}
 			}, 100);
 			$('#loader').hide();
+		});
+	</script>
+	<script>
+		$('form').submit(function () {
+			$('#zf-submitColor').prop('disabled', true);
+			setTimeout(function () {
+				$('#zf-submitColor').prop('disabled', false);
+			}, 5000);
 		});
 	</script>
 </body>
