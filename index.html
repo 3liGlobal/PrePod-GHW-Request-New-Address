@@ -404,7 +404,7 @@
 						dropdownList.empty();
 						appendCloseButton();
 						filteredOptions.forEach((option) => {
-							if (option.Type === "Container" || option.Type === "Street" || option.Type === "Locality" || option.Type === "BuildingNumber") {
+							if (option.Type === "Container" || option.Type === "Street" || option.Type === "Locality" || option.Type === "BuildingNumber" || option.Type === "BuildingNumberType") {
 								dropdownList.append(
 									`<div class="dropdown-item"> ${option.Text} ${option.Description.includes("-") ? option.Description.substring(0, option.Description.lastIndexOf(" - ")) : option.Description} <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div>`
 								);
@@ -448,6 +448,10 @@
 					} else if (option.Type === "BuildingNumber") {
 						dropdownList.append(
 							`<div class="dropdown-item" id="BuildingNumber, ${option.Text}" onclick="getAddressDetail(event, this);"> ${option.Text}  ${option.Description.includes("-") ? option.Description.substring(0, option.Description.lastIndexOf(" - ")) : option.Description}<span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div></div>`
+						);
+					} else if (option.Type === "BuildingNumberType") {
+						dropdownList.append(
+							`<div class="dropdown-item" id="BuildingNumberType, ${option.Text}" onclick="getAddressDetail(event, this);"> ${option.Text}  ${option.Description.includes("-") ? option.Description.substring(0, option.Description.lastIndexOf(" - ")) : option.Description}<span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div></div>`
 						);
 					} else {
 						dropdownList.append(
