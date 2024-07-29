@@ -823,7 +823,11 @@ ul {
 }
 
 .zf-leftAlign .zf-namesmall .zf-threeType .zf-salutationWrapper .zf-salutation,
-.zf-rightAlign .zf-namesmall .zf-threeType .zf-salutationWrapper .zf-salutation {
+.zf-rightAlign
+  .zf-namesmall
+  .zf-threeType
+  .zf-salutationWrapper
+  .zf-salutation {
   width: 50%;
 }
 
@@ -1209,7 +1213,8 @@ ul {
 }
 
 .zf-descFld blockquote.block_quote {
-  background: url("../images/newQuote.gif") no-repeat scroll 12px 10px rgba(0, 0, 0, 0);
+  background: url("../images/newQuote.gif") no-repeat scroll 12px 10px
+    rgba(0, 0, 0, 0);
   border-left: 3px solid #efefef;
   font: 13px/20px georgia, Arial, verdana, Helvetica, sans-serif;
   margin: 15px 3px 15px 15px;
@@ -1997,7 +2002,11 @@ ul {
 }
 
 .zf-leftAlign .zf-namesmall .zf-threeType .zf-salutationWrapper .zf-salutation,
-.zf-rightAlign .zf-namesmall .zf-threeType .zf-salutationWrapper .zf-salutation {
+.zf-rightAlign
+  .zf-namesmall
+  .zf-threeType
+  .zf-salutationWrapper
+  .zf-salutation {
   width: 50%;
 }
 
@@ -2383,7 +2392,8 @@ ul {
 }
 
 .zf-descFld blockquote.block_quote {
-  background: url("../images/newQuote.gif") no-repeat scroll 12px 10px rgba(0, 0, 0, 0);
+  background: url("../images/newQuote.gif") no-repeat scroll 12px 10px
+    rgba(0, 0, 0, 0);
   border-left: 3px solid #efefef;
   font: 13px/20px georgia, Arial, verdana, Helvetica, sans-serif;
   margin: 15px 3px 15px 15px;
@@ -2410,7 +2420,6 @@ ul {
 }
 
 @media (min-width: 568px) {
-
   .name-item,
   .city-item {
     display: grid;
@@ -2599,7 +2608,7 @@ p {
 }
 
 #progressbar .active {
-  color: #961e70;
+  color: #52519e;
 }
 
 #progressbar li {
@@ -2666,7 +2675,7 @@ p {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-  background: #961e70;
+  background: #52519e;
 }
 
 .progress {
@@ -2917,8 +2926,8 @@ ul {
 
 .close-button {
   position: absolute;
-  top: .5rem;
-  right: .5rem;
+  top: 0.5rem;
+  right: 0.5rem;
   width: 3rem;
   line-height: 0;
   border: none;
@@ -2926,7 +2935,7 @@ ul {
 }
 
 .close-button {
-  height: .625rem;
+  height: 0.625rem;
   font-size: 18px;
   cursor: pointer;
 }
