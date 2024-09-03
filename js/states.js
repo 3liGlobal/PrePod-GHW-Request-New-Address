@@ -53,7 +53,6 @@ const convert_ISO_3166_2_to_1 = {
   CK: "COK",
   CR: "CRI",
   CI: "CIV",
-  HT: "HTI",
   HR: "HRV",
   CU: "CUB",
   CY: "CYP",
