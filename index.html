@@ -83,7 +83,7 @@
                   <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" checktype="c7"
                     value="" phoneFormat="1" isCountryCodeEnabled="false" fieldType="11"
                     id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1" placeholder=""
-                    oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+                    oninput="this.value = this.value.replace(/[^0-9+]/g, '')" />
                 </span>
                 <p id="PhoneNumber_error" class="zf-errorMessage" style="display: none">
                   Please complete this required field.
@@ -604,7 +604,15 @@
         });
       });
     }
+    var input = document.querySelector("#international_PhoneNumber_countrycode");
 
+    // Event listener to ensure the "+" is always there
+    input.addEventListener("input", function () {
+      // If "+" is removed, add it back
+      if (!input.value.startsWith("+")) {
+        input.value = "+" + input.value.replace(/[^0-9]/g, ''); // Only allow digits after "+"
+      }
+    });
     var input = document.querySelector(
       "#international_PhoneNumber_countrycode"
     );
