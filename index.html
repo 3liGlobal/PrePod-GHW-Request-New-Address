@@ -778,17 +778,7 @@
         "EH",
       ],
     });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Enter") {
-        event.preventDefault(); // Prevent form from being submitted through enter key
-        zf_ValidateAndSubmit();
-      }
-    });
-
-    document
-      .querySelector("#international_PhoneNumber_countrycode")
-      .addEventListener("countrychange", function () {
+    document.querySelector("#international_PhoneNumber_countrycode").addEventListener("countrychange", function () {
         var countySel = document.querySelector(".dropdown-countries");
         var countryData = iti.getSelectedCountryData();
         var countryName = countryData.name;
@@ -798,6 +788,12 @@
         var event = new Event('change');
         countySel.dispatchEvent(event);
       });
+      document.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Prevent form from being submitted through enter key
+        zf_ValidateAndSubmit();
+      }
+    });
   </script>
 
   <script>
