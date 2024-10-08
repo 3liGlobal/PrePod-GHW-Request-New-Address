@@ -587,7 +587,7 @@
         });
       });
     }
-
+    
     function getAddressDetail(e, thisObj) {
       let id = thisObj.id;
       const query = `https://api.addressy.com/Capture/Interactive/Retrieve/v1.2/json3.ws?Key=TY78-BD75-NW81-XE97&Id=${id}`;
@@ -604,6 +604,14 @@
         });
       });
     }
+    var input = document.querySelector("#international_PhoneNumber_countrycode");
+        // Event listener to ensure the "+" is always there
+        input.addEventListener("input", function () {
+      // If "+" is removed, add it back
+      if (!input.value.startsWith("+")) {
+        input.value = "+" + input.value.replace(/[^0-9]/g, ''); // Only allow digits after "+"
+      }
+    });
     var input = document.querySelector("#international_PhoneNumber_countrycode"); 
     var iti = window.intlTelInput(input, {
       separateDialCode: false,
